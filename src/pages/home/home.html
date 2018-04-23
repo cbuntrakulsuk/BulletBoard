@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Bulletboard</ion-title>
+    <ion-title>Example Neighborhood</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -8,37 +13,39 @@
   <ion-card>
 
     <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/imgs/tai-lopez.jpg">
-      </ion-avatar>
-      <h2>Marty McFly</h2>
-      <p>November 5, 1955</p>
+      <ion-icon name="megaphone" item-start small></ion-icon>
+      <h2>Sponsored Post</h2>
     </ion-item>
 
     <img src="assets/imgs/garage.jpg">
+  
+    <ion-item>
+      <ion-icon name="notifications" item-start large></ion-icon>
+      <h2>Knowledge (Part 1)</h2>
+      <p>123 Hollywood Hills, TE 52132</p>
+    </ion-item>
 
     <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-        Whoa. This is heavy.</p>
+      <p>Here in my garage, just bought this new Lamborghini here. It’s fun to drive up here in the Hollywood hills.</p>
     </ion-card-content>
 
     <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
+      <ion-col col-3>
+        <button ion-button icon-left clear>
+          <ion-icon name="eye"></ion-icon>
+          <div>View</div>
         </button>
       </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
+      <ion-col col-9>
+        <button ion-button icon-right clear>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/imgs/tai-lopez.jpg">
+            </ion-avatar>
+            <h3>Tai Lopez</h3>
+            <p>November 5, 2016</p>
+          </ion-item>
         </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
       </ion-col>
     </ion-row>
 
