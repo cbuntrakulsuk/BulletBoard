@@ -1,11 +1,40 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Profile
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>
+			User Profile
+		</ion-title>
+	</ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+	<div class="profile-head">
+		<div class="centered">
+			<img src="assets/imgs/3dava.png" class="avatar">
+			<h1>John Doe</h1>
+			<h2>john.doe@email.com</h2>
+			<h2>(123) 456-789</h2>
+		</div>
+	</div>
+
+	<button padding>
+		<p class="left">Posts</p>
+		<p class="right">1</p>
+	</button>
+	<button padding (click)="goToMessages()">
+		<p class="left">Received Messages</p>
+		<p class="right">1</p>
+	</button>
+	<button padding>
+		<p class="left">Sent Messages</p>
+		<p class="right">0</p>
+	</button>
+	<button padding>
+		<p class="left">Home</p>
+		<p class="right">Los Angeles, CA</p>
+	</button>
+	<button padding (click)="switchNotifications($event.target)">
+		<p class="left">Notifications</p>
+		<p class="right">Off</p>
+	</button>
 
 </ion-content>
