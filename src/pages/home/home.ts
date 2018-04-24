@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 
+import { ViewPostPage } from '../view-post/view-post';
+import { ViewAuthorPage } from '../view-author/view-author';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -76,7 +79,15 @@ export class HomePage {
   }
 
   viewPost(event: any, post: any):void {
-    
+    this.navCtrl.push(ViewPostPage, {
+      data: post
+    });
+  }
+
+  viewAuthor(event: any, author: any):void {
+    this.navCtrl.push(ViewAuthorPage, {
+      data: author
+    });
   }
 
   toggleSearch():void {
