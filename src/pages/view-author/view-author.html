@@ -7,12 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>view-author</ion-title>
+    <ion-title>{{ author.name }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-avatar class="centered">
+    <img src="{{ author.avatar }}" class="avatar">
+  </ion-avatar>
+  {{ author.description }}
 </ion-content>
