@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
+import { PinnedPage } from '../pinned/pinned';
 import { Messages1 } from '../messages/messages';
 
 @Component({
@@ -42,6 +43,10 @@ export class ProfilePage {
 		alert.present();
 	}
 
+	goToPosts() {
+		this.navCtrl.push(PinnedPage);
+
+	}
 	goToMessages() {
 		this.navCtrl.push(Messages1);
 	}
