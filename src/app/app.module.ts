@@ -26,7 +26,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PinnedPage,
     ProfilePage,
 		TabsPage,
-		Messages1
+		Messages1,
     ViewPostPage,
     ViewAuthorPage
   ],
@@ -44,7 +44,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PinnedPage,
     ProfilePage,
 		TabsPage,
-		Messages1
+		Messages1,
     TabsPage,
     ViewPostPage,
     ViewAuthorPage
