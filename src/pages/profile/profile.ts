@@ -14,10 +14,8 @@ export class ProfilePage {
 	}
 
 	switchNotifications(element) {
-		var change = element.firstChild.nextElementSibling;
-		console.log(change);
-		change = change.nextElementSibling;
-		console.log(change);
+		var change = element.firstChild;
+		while (change.nextElementSibling != null) change = change.nextElementSibling;
 		var current = change.textContent;
 		if (current == "On") change.textContent = "Off";
 		else change.textContent = "On";
@@ -25,15 +23,14 @@ export class ProfilePage {
 
 	setHomeLocation(element) {
 		let alert = this.alertCtrl.create({
-			title: 'Set Home Location',
-			message: 'Home will be set to current location!',
+			title: 'Home Location',
+			message: 'Set Home to current location?',
 			buttons: [
 				{
 					text: "OK",
 					handler: () => {
 						var change = element.firstChild;
-						change = change.nextElementSibling;
-						change = change.nextElementSibling;
+						while (change.nextElementSibling != null) change = change.nextElementSibling;
 						change.textContent = "Northridge, CA"
 					}
 				},
