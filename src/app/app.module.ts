@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Messages1 } from '../pages/messages/messages';
 import { ViewPostPage } from '../pages/view-post/view-post';
 import { ViewAuthorPage } from '../pages/view-author/view-author';
+import { SendPage } from '../pages/send/send';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 		TabsPage,
 		Messages1,
     ViewPostPage,
-    ViewAuthorPage
+		ViewAuthorPage,
+		SendPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 		Messages1,
     TabsPage,
     ViewPostPage,
-    ViewAuthorPage
+		ViewAuthorPage,
+		SendPage
   ],
   providers: [
     StatusBar,

@@ -13,10 +13,13 @@ export class ProfilePage {
   }
 
 	switchNotifications( element ) {
-		console.log(element);
-		var current = element.children[1].textContent;
-		if ( current == "On") element.children[1].textContent = "Off";
-		else element.children[1].textContent = "On";
+		var change = element.firstChild.nextElementSibling;
+		console.log(change);
+		change = change.nextElementSibling;
+		console.log(change);
+		var current = change.textContent;
+		if ( current == "On") change.textContent = "Off";
+		else change.textContent = "On";
 	}
 
 	goToMessages() {
