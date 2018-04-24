@@ -10,7 +10,6 @@ import { ProfilePage } from '../profile/profile';
 export class SendPage {
 
   constructor(public alertCtrl: AlertController, public navCtrl: NavController) {
-		let sentMessages = 0;
   }
 
   sendMessage() {
