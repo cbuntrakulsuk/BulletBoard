@@ -1,84 +1,78 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Example Neighborhood
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>
+			Example Neighborhood
+		</ion-title>
+	</ion-navbar>
 
-  <ion-toolbar no-border-top>
-    <ion-buttons left>
-        <button  ion-button icon-only (click)="doConfirm()">
-          <ion-icon name="close"></ion-icon>
-        </button>
-      </ion-buttons>
-
-    <h6 class="post" align="center">New Post</h6>
-
-    <ion-buttons right>
-      <button  ion-button icon-only (click)="doAlert()">
-        <ion-icon name="checkmark"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
+	<ion-grid>
+		<ion-row>
+			<ion-col text-center>
+				<button ion-button icon-only clear small (click)="takePhoto()">
+					<ion-icon color="dark2" name="camera"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button icon-only clear small (click)="accessGallery()">
+					<ion-icon color="dark2" name="image"></ion-icon>
+					<!--<img [src]="base64Image" *ngIf="base64Image" />-->
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button icon-only clear small (click)="getLocation()">
+					<ion-icon color="dark2" name="pin"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button icon-only clear small (click)="saveDraft()">
+					<ion-icon color="dark2" name="archive"></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
 
 </ion-header>
 <ion-content>
-  <ion-item>
-      <ion-input placeholder="Title" clearInput></ion-input>
-  </ion-item>
+	<ion-item>
+		<ion-input placeholder="Title" clearInput></ion-input>
+	</ion-item>
 
-  <ion-item>
-      <ion-label>Date</ion-label>
-      <ion-datetime displayFormat="DD-MM-YYYY HH:mm" [(ngModel)]="today"></ion-datetime>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label>Post Options</ion-label>
-    <ion-select [(ngModel)]="gaming" interface="popover">
-      <ion-option value="notice">Notice</ion-option>
-      <ion-option value="request">Request</ion-option>
-      <ion-option value="sponsored">Sponsored</ion-option>
-    </ion-select>
-  </ion-item>
+	<ion-item>
+		<ion-label>Date</ion-label>
+		<ion-datetime displayFormat="DD-MM-YYYY HH:mm" [(ngModel)]="today"></ion-datetime>
+	</ion-item>
 
-  <ion-textarea placeholder=" Type your message ">
-    <ion-input></ion-input>
-  </ion-textarea>
+	<ion-item>
+		<ion-label>Post Options</ion-label>
+		<ion-select [(ngModel)]="gaming" interface="popover">
+			<ion-option value="notice">Notice</ion-option>
+			<ion-option value="request">Request</ion-option>
+			<ion-option value="sponsored">Sponsored</ion-option>
+		</ion-select>
+	</ion-item>
 
-  <img *ngIf="image" [src]="domSanitizer.bypassSecurityTrustUrl(image)" />
-  <img *ngIf="base64Image" [src]="domSanitizer.bypassSecurityTrustUrl(base64Image)"  />
+	<ion-textarea placeholder=" Type your message ">
+		<ion-input></ion-input>
+	</ion-textarea>
+
+	<img *ngIf="image" [src]="domSanitizer.bypassSecurityTrustUrl(image)" />
+	<img *ngIf="base64Image" [src]="domSanitizer.bypassSecurityTrustUrl(base64Image)" />
+
+
+	<ion-grid style="position:fixed; bottom:10%;background-color:white;border-top:1px solid lightgray">
+		<ion-row>
+			<ion-col text-center>
+				<button ion-button icon-only clear small (click)="doConfirm()">
+					<ion-icon color="dark2" name="md-close"> Cancel</ion-icon>
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button icon-only clear small (click)="doAlert()">
+					<ion-icon color="dark2" name="md-send"> Submit</ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
 
 </ion-content>
-
-<ion-footer>
-    <ion-grid>
-        <ion-row>
-          <ion-col text-center>
-              <button  ion-button icon-only clear small (click)="takePhoto()">
-                <ion-icon color="dark2" name="camera"></ion-icon>
-              </button>
-          </ion-col>
-          <ion-col text-center>
-              <button  ion-button icon-only clear small (click)="accessGallery()">
-                <ion-icon color="dark2" name="image"></ion-icon>
-                <!--<img [src]="base64Image" *ngIf="base64Image" />-->
-              </button>
-          </ion-col>
-          <ion-col text-center>
-              <button  ion-button icon-only clear small (click)="getLocation()">
-                <ion-icon color="dark2" name="pin"></ion-icon>
-              </button>
-          </ion-col>
-          <ion-col text-center>
-            <button  ion-button icon-only clear small (click) = "saveDraft()">
-              <ion-icon color="dark2" name="archive"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-</ion-footer>
-
-
-
-
-

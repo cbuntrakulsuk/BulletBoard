@@ -21,7 +21,6 @@ export class SendPage {
     alert.present()
     alert.onDidDismiss(() => {
 			this.navCtrl.pop();
-			this.navCtrl.pop();
 		})
 	}
   sendMessage() {

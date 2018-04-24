@@ -8,6 +8,7 @@ import { ViewAuthorPage } from '../view-author/view-author';
   selector: 'page-pinned',
   templateUrl: 'pinned.html'
 })
+
 export class PinnedPage {
 
   showSearch: boolean;
