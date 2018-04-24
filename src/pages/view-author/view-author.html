@@ -17,5 +17,11 @@
   <ion-avatar class="centered">
     <img src="{{ author.avatar }}" class="avatar">
   </ion-avatar>
-  {{ author.description }}
+  <div padding>
+    {{ author.description }}
+  </div>
+  <button ion-button full icon-left>
+    <ion-icon name="chatbubbles"></ion-icon>
+    Message
+  </button>
 </ion-content>
