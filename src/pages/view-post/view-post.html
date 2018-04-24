@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar>
+    <button menuToggle *ngIf="!post">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ post.title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  {{ post.description }}
+</ion-content>

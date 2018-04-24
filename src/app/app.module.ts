@@ -11,6 +11,8 @@ import { PinnedPage } from '../pages/pinned/pinned';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Messages1 } from '../pages/messages/messages';
+import { ViewPostPage } from '../pages/view-post/view-post';
+import { ViewAuthorPage } from '../pages/view-author/view-author';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilePage,
 		TabsPage,
 		Messages1
+    ViewPostPage,
+    ViewAuthorPage
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilePage,
 		TabsPage,
 		Messages1
+    TabsPage,
+    ViewPostPage,
+    ViewAuthorPage
   ],
   providers: [
     StatusBar,

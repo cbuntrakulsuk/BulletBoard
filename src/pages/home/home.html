@@ -2,23 +2,26 @@
   <ion-navbar>
     <ion-title>Example Neighborhood</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
+      <button ion-button icon-only *ngIf="!showSearch" (click)="toggleSearch();">
         <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only large *ngIf="showSearch" (click)="toggleSearch();">
+        <ion-icon name="close"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-searchbar *ngIf="showSearch" (ionInput)="getPosts($event)"></ion-searchbar>
 </ion-header>
-
 <ion-content padding>
-  <ion-card>
-
-    <ion-item>
+  
+  <ion-card *ngFor="let post of posts">
+    <ion-item *ngIf="post.sponsored">
       <ion-icon name="megaphone" item-start small></ion-icon>
       <h2>Sponsored Post</h2>
     </ion-item>
 
     <div style="position: relative">
-      <img src="assets/imgs/garage.jpg">
+      <img src="{{ post.img }}">
       <ion-fab right top>
         <button ion-fab>
           <ion-icon name="bookmark"></ion-icon>
@@ -27,30 +30,30 @@
     </div>
 
     <ion-item>
-      <ion-icon name="notifications" item-start large></ion-icon>
-      <h2>Knowledge (Part 1)</h2>
-      <p>123 Hollywood Hills, TE 52132</p>
+      <ion-icon name="{{ post.icon }}" item-start large></ion-icon>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.location }}</p>
     </ion-item>
 
     <ion-card-content>
-      <p>Here in my garage, just bought this new Lamborghini here. It’s fun to drive up here in the Hollywood hills.</p>
+      <p>{{ post.description }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col col-3>
-        <button ion-button icon-left clear>
+        <button ion-button icon-left clear (click)="viewPost($event, post)">
           <ion-icon name="eye"></ion-icon>
           <div>View</div>
         </button>
       </ion-col>
       <ion-col col-9>
-        <button ion-button icon-right clear>
+        <button ion-button icon-right clear (click)="viewAuthor($event, post.author)">
           <ion-item>
             <ion-avatar item-start>
-              <img src="assets/imgs/tai-lopez.jpg">
+              <img src="{{ post.author.avatar }}">
             </ion-avatar>
-            <h3>Tai Lopez</h3>
-            <p>November 5, 2016</p>
+            <h3>{{ post.author.name }}</h3>
+            <p>{{ post.posted.toDateString() }}</p>
           </ion-item>
         </button>
       </ion-col>
