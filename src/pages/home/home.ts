@@ -75,6 +75,10 @@ export class HomePage {
     }
   }
 
+  viewPost(event: any, post: any):void {
+    
+  }
+
   toggleSearch():void {
     this.showSearch = !this.showSearch;
   }

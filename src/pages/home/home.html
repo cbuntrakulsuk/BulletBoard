@@ -41,13 +41,13 @@
 
     <ion-row>
       <ion-col col-3>
-        <button ion-button icon-left clear>
+        <button ion-button icon-left clear (click)="viewPost($event, post)">
           <ion-icon name="eye"></ion-icon>
           <div>View</div>
         </button>
       </ion-col>
       <ion-col col-9>
-        <button ion-button icon-right clear>
+        <button ion-button icon-right clear (click)="viewAuthor($event, post.author)">
           <ion-item>
             <ion-avatar item-start>
               <img src="{{ post.author.avatar }}">
