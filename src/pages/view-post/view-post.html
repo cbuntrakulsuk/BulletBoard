@@ -4,11 +4,48 @@
     <button menuToggle *ngIf="!post">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{ post.title }}</ion-title>
+    <ion-title>
+      <ion-icon name="{{ post.icon }}" item-start large></ion-icon>
+      {{ post.title }}
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  {{ post.description }}
+
+  <button ion-button full clear (click)="viewAuthor($event, post.author)">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{ post.author.avatar }}">
+      </ion-avatar>
+      <h2>
+        <a>{{ post.author.name }}</a>
+      </h2>
+    </ion-item>
+  </button>
+
+  <div style="position: relative">
+    <img src="{{ post.img }}">
+    <ion-fab right top>
+      <button ion-fab>
+        <ion-icon name="bookmark"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
+  <ion-item>
+    <ion-icon name="navigate" item-start large></ion-icon>
+    <h2>{{ post.location }}</h2>
+  </ion-item>
+
+  <div padding>
+    {{ post.description }}
+  </div>
+
+  <button ion-button full icon-left>
+    <ion-icon name="chatbubbles"></ion-icon>
+    Comment
+  </button>
+
 </ion-content>
