@@ -51,7 +51,12 @@ page-messages {
 			top: 0;
 		}
 		.bottom {
+			color: lightgray !important;
 			bottom: 0;
+		}
+
+		button { 
+			background-color: white;
 		}
 
 }

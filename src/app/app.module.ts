@@ -14,6 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Messages1 } from '../pages/messages/messages';
 import { ViewPostPage } from '../pages/view-post/view-post';
 import { ViewAuthorPage } from '../pages/view-author/view-author';
+import { SendPage } from '../pages/send/send';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,7 +36,8 @@ import { LocationPage } from '../pages/location/location';
 		Messages1,
     ViewPostPage,
     ViewAuthorPage,
-    LocationPage
+    LocationPage,
+		SendPage
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,7 @@ import { LocationPage } from '../pages/location/location';
     ViewPostPage,
     ViewAuthorPage,
     LocationPage
+		SendPage
   ],
   providers: [
     StatusBar,
