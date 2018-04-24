@@ -47,7 +47,7 @@ export class HomePage {
         description: 'As promised the Pavement Company will come and repave the roads. While we are doing this please note that the street will be closed from 11:00am to 3:00pm. This will happen next week on Tuesday so plan ahead. Thank you.',
         icon: 'notifications',
         img: 'assets/imgs/road-closure.jpg',
-        author: { name: 'John Doe', description: 'I am a government employee', avatar: 'assets/imgs/john-doe.jpg'},
+        author: { name: 'John Doe', description: 'An average joe is a symbolization of an average American person (generally male). The term was used mainly in the late 90s - early 2000s, when the majority of America\'s population consisted of middle class citizens. Usually falls under the following traits: considered not to be dumb nor smart, follows any kind of sports (and also drinks heavily when their favourite team is not doing well), works five or six days a week (usually as a white collar worker), and comes home every night to sit on their sofas and watch TV.', avatar: 'assets/imgs/john-doe.jpg'},
         posted: new Date()
       },
       {

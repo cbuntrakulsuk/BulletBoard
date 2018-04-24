@@ -1,11 +1,65 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Pinned
-    </ion-title>
+    <ion-title>Pinned Posts</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only *ngIf="!showSearch" (click)="toggleSearch();">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only large *ngIf="showSearch" (click)="toggleSearch();">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+  <ion-searchbar *ngIf="showSearch" (ionInput)="getPosts($event)"></ion-searchbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  
+  <ion-card *ngFor="let post of posts">
+    <ion-item *ngIf="post.sponsored">
+      <ion-icon name="megaphone" item-start small></ion-icon>
+      <h2>Sponsored Post</h2>
+    </ion-item>
+
+    <div style="position: relative">
+      <img src="{{ post.img }}">
+      <ion-fab right top>
+        <button ion-fab>
+          <ion-icon name="bookmark"></ion-icon>
+        </button>
+      </ion-fab>
+    </div>
+
+    <ion-item>
+      <ion-icon name="{{ post.icon }}" item-start large></ion-icon>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.location }}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{ post.description }}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button icon-left clear (click)="viewPost($event, post)">
+          <ion-icon name="eye"></ion-icon>
+          <div>View Post</div>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <button ion-button icon-right clear (click)="viewAuthor($event, post.author)">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{ post.author.avatar }}">
+            </ion-avatar>
+            <h3>{{ post.author.name }}</h3>
+            <p>{{ post.posted.toDateString() }}</p>
+          </ion-item>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
 
 </ion-content>
