@@ -57,7 +57,7 @@ import { LocationPage } from '../pages/location/location';
     TabsPage,
     ViewPostPage,
     ViewAuthorPage,
-    LocationPage
+    LocationPage,
 		SendPage
   ],
   providers: [
