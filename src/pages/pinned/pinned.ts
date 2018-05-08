@@ -41,14 +41,14 @@ export class PinnedPage {
         posted: new Date()
       },
       {
-        sponsored: false,
-        title: 'Lost Doggo',
-        location: '1245 Hollywood Hills, CA 52132',
-        description: 'Please help, I have recently lost my doggo, it is a shiba doggo named Doge. The last place I saw him was inside my house, he must of gotten through my fence somehow. If anyone finds him please message me. I will reward the person who find the dog for me with 5 million doge coins',
-        icon: 'help-circle',
-        img: 'assets/imgs/lost-doggo.jpg',
-        author: { name: 'Alfonso Ribeiro', description: 'An American actor, director, game show host and a dancer Alfonso Lincoln Ribeiro, Sr. is most known among people as Carlton Banks on the NBC sitcom The Fresh Prince of Bel-Air.', avatar: 'assets/imgs/alfonso-ribeiro.jpg'},
-        posted: new Date()
+				sponsored: false,
+				title: 'Lost Dog',
+				location: '1245 Hollywood Hills, CA 52132',
+				description: 'Please help, I have recently lost my dog, an Australian Shepard named Charlie. The last place I saw him was inside my house. I left the door open as I was putting boxes in and he must have run out. If anyone finds him please message me. I will reward the person who finds him.',
+				icon: 'help-circle',
+				img: 'assets/imgs/lost-doggo.jpg',
+				author: { name: 'Chad Buntrakulsuk', description: 'A guy new to the neighborhood. Unfortunately, I need some help.', avatar: 'assets/imgs/alfonso-ribeiro.jpg'},
+				posted: new Date()
       }
     ];
   }

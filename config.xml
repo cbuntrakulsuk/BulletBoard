@@ -89,5 +89,5 @@
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyBMLZ7ud4d5CevGckVXXpZLBPqsQNznH-o" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyCO85gC4eYaO4xboIzs3GlsNaElZxLiLLc" />
     </plugin>
-    <engine name="android" spec="~7.0.0" />
+    <engine name="android" spec="7.0.0" />
 </widget>

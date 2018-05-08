@@ -31,17 +31,7 @@ export class HomePage {
   intializeItems():void {
     this.posts = [
 			{
-        sponsored: false,
-        title: 'Lost Doggo',
-        location: '1245 Hollywood Hills, CA 52132',
-        description: 'Please help, I have recently lost my doggo, it is a shiba doggo named Doge. The last place I saw him was inside my house, he must of gotten through my fence somehow. If anyone finds him please message me. I will reward the person who find the dog for me with 5 million doge coins',
-        icon: 'help-circle',
-        img: 'assets/imgs/lost-doggo.jpg',
-        author: { name: 'Alfonso Ribeiro', description: 'An American actor, director, game show host and a dancer Alfonso Lincoln Ribeiro, Sr. is most known among people as Carlton Banks on the NBC sitcom The Fresh Prince of Bel-Air.', avatar: 'assets/imgs/alfonso-ribeiro.jpg'},
-        posted: new Date()
-      },
-      {
-        sponsored: true,
+				sponsored: true,
         title: 'Knowledge',
         location: '1233 Hollywood Hills, CA 52132',
         description: 'Here in my garage, just bought this new Lamborghini here. It’s fun to drive up here in the Hollywood hills. But you know what I like more than materialistic things? Knowledge.',
@@ -51,7 +41,7 @@ export class HomePage {
         posted: new Date()
       },
       {
-        sponsored: true,
+				sponsored: true,
         title: 'Road Closure',
         location: '1242 Hollywood Hills, CA 52132',
         description: 'As promised the Pavement Company will come and repave the roads. While we are doing this please note that the street will be closed from 11:00am to 3:00pm. This will happen next week on Tuesday so plan ahead. Thank you.',
@@ -59,7 +49,17 @@ export class HomePage {
         img: 'assets/imgs/road-closure.jpg',
         author: { name: 'John Doe', description: 'An average joe is a symbolization of an average American person (generally male). The term was used mainly in the late 90s - early 2000s, when the majority of America\'s population consisted of middle class citizens. Usually falls under the following traits: considered not to be dumb nor smart, follows any kind of sports (and also drinks heavily when their favourite team is not doing well), works five or six days a week (usually as a white collar worker), and comes home every night to sit on their sofas and watch TV.', avatar: 'assets/imgs/john-doe.jpg'},
         posted: new Date()
-      }
+      },
+			{
+				sponsored: false,
+				title: 'Lost Dog',
+				location: '1245 Hollywood Hills, CA 52132',
+				description: 'Please help, I have recently lost my dog, an Australian Shepard named Charlie. The last place I saw him was inside my house. I left the door open as I was putting boxes in and he must have run out. If anyone finds him please message me. I will reward the person who finds him.',
+				icon: 'help-circle',
+				img: 'assets/imgs/lost-doggo.jpg',
+				author: { name: 'Chad Buntrakulsuk', description: 'A guy new to the neighborhood. Unfortunately, I need some help.', avatar: 'assets/imgs/alfonso-ribeiro.jpg'},
+				posted: new Date()
+			}
     ];
   }
 

@@ -5,6 +5,7 @@ import { NavController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { DomSanitizer } from '@angular/platform-browser';
 import { LocationPage } from '../location/location';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-add',
@@ -72,7 +73,7 @@ export class AddPage {
     alert.onDidDismiss(() => 
     {
       this.navCtrl.setRoot(this.navCtrl.getActive().component);
-      this.navCtrl.setRoot(AddPage)
+      this.navCtrl.setRoot(HomePage)
     })
 
   }
